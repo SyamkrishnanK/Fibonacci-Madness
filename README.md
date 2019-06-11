@@ -1,0 +1,463 @@
+# Fibonacci-Madness
+Fibonacci Madness Solution
+
+Problem Statement
+
+Fibonacci Madness
+
+A Fibonacci sequence is defined recursively by:
+
+F0 = 0
+
+F1 = 1
+
+Fn = Fn − 1 + Fn − 2, for integer n > 1.
+
+One way of generalizing the Fibonacci sequence is by starting with any pair of numbers and extending to negative values of n.
+
+Given two terms of a generalized Fibonacci sequence Fp and Fq, their positions p and q respectively and a position r, find Fr.
+
+Input Format
+
+The first line of the input contains an integer t denoting the number of test cases.
+
+Each test case contains three lines.
+
+First line of each test case contains two space separated integers p and Fp
+Second line contains two space separated integers q and Fq
+Third line contains an integer r
+Output Format
+
+For each test case, print Fr which is the term of the sequence at position r.
+
+If Fr is not an integer, represent it as an irreducible fraction in the form a/b where b > 0.
+
+Sample Input
+
+5
+
+0 1
+
+6 13
+
+10
+
+3 65
+
+6 315
+
+-10
+
+0 11
+
+1 -6
+
+2
+
+9 36
+
+15 646
+
+-5
+
+11 72
+
+20 5473
+
+6
+
+Sample Output
+
+89
+
+4620
+
+5
+
+-1/4
+
+13/2
+
+Constraints
+
+1 <= t <= 1000
+
+-1000 <= p, q, r <= 1000
+
+-10000 <= Fp, Fq <= 10000
+
+p != q != r
+
+ 
+
+Sample I/P
+
+45
+
+0 0
+
+7 13
+
+1
+
+0 0
+
+-10 55
+
+1
+
+3 2
+
+7 13
+
+11
+
+0 11
+
+1 -6
+
+2
+
+0 11
+
+1 -6
+
+-1
+
+0 11
+
+1 -6
+
+-3
+
+9 36
+
+15 646
+
+0
+
+9 36
+
+15 646
+
+10
+
+0 0
+
+1 0
+
+10
+
+0 0
+
+2 1
+
+-6
+
+5 5
+
+10 10
+
+4
+
+0 0
+
+1 1
+
+100
+
+0 0
+
+1 1
+
+-100
+
+9 36
+
+15 646
+
+8
+
+9 19
+
+15 341
+
+0
+
+9 19
+
+15 341
+
+1
+
+10 48
+
+14 329
+
+18
+
+10 48
+
+14 329
+
+0
+
+10 48
+
+14 329
+
+1
+
+10 49
+
+18 2302
+
+0
+
+10 49
+
+18 2302
+
+1
+
+10 41
+
+14 281
+
+0
+
+-15 -359
+
+-9 -20
+
+-3
+
+-19 6483
+
+-11 138
+
+-3
+
+0 1
+
+10 2
+
+5
+
+5 5
+
+9 9
+
+7
+
+4 40
+
+10 1200
+
+50
+
+50 5000
+
+60 6000
+
+70
+
+-10 100
+
+10 -100
+
+0
+
+-20 200
+
+20 -200
+
+1
+
+77 414
+
+92 636
+
+67
+
+1 58
+
+90 389
+
+37
+
+95 259
+
+73 451
+
+18
+
+83 167
+
+82 43
+
+60
+
+79 211
+
+37 191
+
+17
+
+68 72
+
+4 820
+
+1
+
+3 76
+
+31 389
+
+56
+
+51 125
+
+86 760
+
+22
+
+1 984
+
+27 894
+
+60
+
+15 271
+
+7 523
+
+48
+
+-10 10
+
+10 10
+
+0
+
+-10 10
+
+10 10
+
+1
+
+9 36
+
+15 646
+
+1
+
+0 0
+
+1 1
+
+256
+
+0 1
+
+1 1000
+
+2
+
+ 
+
+ 
+
+ 
+
+Sample O/P
+
+1
+
+-1
+
+89
+
+5
+
+-17
+
+-45
+
+1/2
+
+233/4
+
+0
+
+-8
+
+-6
+
+354224848179261915075
+
+-354224848179261915075
+
+89/4
+
+1/2
+
+1/4
+
+2255
+
+1/3
+
+2/3
+
+2/7
+
+5/7
+
+2/3
+
+-1
+
+3
+
+1/11
+
+14/3
+
+274935114675
+
+733000
+
+0
+
+-40/1353
+
+3102537/61
+
+3098152794962/1779979416004714189
+
+-28011962391894968/199
+
+-1725486
+
+96759156288482/33489287
+
+-36855367574539316/10610209857723
+
+6913343854799/105937
+
+-265255168280267/1845493
+
+855306023095902/121393
+
+14342954639/7
+
+20/123
+
+10/123
+
+3/4
+
+141693817714056513234709965875411919657707794958199867
+
+1001
